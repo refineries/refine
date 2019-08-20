@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "sourceMap": true,
+    "jsx": "react"
+  },
+  "include": [
+      "components/**/*"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
