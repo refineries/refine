@@ -1,0 +1,23 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint-config-alloy/react",
+    "eslint-config-alloy/typescript",
+    "prettier/@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-console": 1,
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+  }
+}
