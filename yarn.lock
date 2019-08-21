@@ -1873,6 +1873,11 @@ core-js-compat@^3.1.1:
     browserslist "^4.6.6"
     semver "^6.3.0"
 
+core-js@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.2.1.tgz?cache=0&sync_timestamp=1565612695976&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
+  integrity sha1-zUHzhTTabMWffbBQ/mcwfemGiwk=
+
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -5015,7 +5020,7 @@ regenerate@^1.4.0:
   resolved "https://registry.npm.taobao.org/regenerate/download/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
   integrity sha1-SoVuxLVuQHfFV1icroXnpMiGmhE=
 
-regenerator-runtime@^0.13.2:
+regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha1-fPanfY9cb2Drc8X8GVWyzrAea/U=
