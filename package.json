@@ -1,10 +1,13 @@
 {
-  "name": "refine",
+  "name": "@refineries/refine",
   "version": "0.0.1",
   "description": "A UI component library with the principle of refine design",
   "license": "MIT",
   "repository": "Refineries/refine",
-  "homepage": "https://refineries.github.io/refine-document/dist",
+  "bugs": {
+    "url": "https://github.com/refineries/refine/issues"
+  },
+  "private": false,
   "keywords": [
     "refine",
     "refine-ui"
@@ -22,11 +25,21 @@
     "Sta Zhu"
   ],
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "build:esm": "tsc --rootDir components --outDir esm",
-    "build:sass": "sass components:esm"
+    "start:site": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "build:site": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:sass": "sass components:esm",
+    "build:tsc": "tsc --rootDir components --outDir esm-tsc",
+    "build:babel": "babel esm-tsc --out-dir esm",
+    "build:esm": "npm run build:tsc && npm run build:babel && rimraf esm-tsc",
+    "build": "npm run build:esm && npm run build:sass",
+    "publish": "npm version patch && npm publish --registry https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "core-js": "^3.2.1",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -59,10 +72,5 @@
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
   }
 }
