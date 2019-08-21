@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "core-js": "^3.2.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.9",
+    "react-dom": "^16.9",
     "react-router-dom": "^5.0.1",
     "regenerator-runtime": "^0.13.3"
   },
@@ -63,7 +63,7 @@
     "fork-ts-checker-notifier-webpack-plugin": "^1.0.2",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "^3.2.0",
-    "prettier": "1.18.2",
+    "prettier": "^1.18.2",
     "react-hot-loader": "^4.12.11",
     "sass": "^1.22.7",
     "sass-loader": "^7.1.0",

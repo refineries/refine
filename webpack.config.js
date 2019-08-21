@@ -17,7 +17,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', 'scss', '.css'],
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.scss', '.css'],
     alias: {
       'react-dom': '@hot-loader/react-dom'
     }
