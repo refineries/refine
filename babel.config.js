@@ -12,5 +12,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [__DEV__ && 'react-hot-loader/babel'].filter(Boolean),
+  plugins: [global.__DEV__ && 'react-hot-loader/babel'].filter(Boolean),
 }

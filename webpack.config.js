@@ -6,7 +6,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin')
 
 module.exports = {
-  mode: __NODE_ENV__,
+  mode: global.__NODE_ENV__,
   entry: {
     main: './src/index',
   },
