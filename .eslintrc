@@ -1,4 +1,5 @@
 {
+  "root": true,
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -7,8 +8,9 @@
   "extends": [
     "eslint-config-alloy/react",
     "eslint-config-alloy/typescript",
+    "prettier",
+    "prettier/react",
     "prettier/@typescript-eslint",
-    "prettier"
   ],
   "settings": {
     "react": {
