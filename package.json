@@ -35,10 +35,10 @@
     "publish": "npm publish --registry https://registry.npmjs.org --access public"
   },
   "dependencies": {
+    "core-js": "^3.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "core-js": "^3.2.1",
     "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
@@ -46,7 +46,6 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-router-dom": "^4.3.4",
@@ -68,6 +67,7 @@
     "sass": "^1.22.7",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
