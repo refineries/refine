@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
     "declaration": true,
     "sourceMap": true,
-    "jsx": "react"
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "strict": true,
+    "alwaysStrict": true,
+    "preserveConstEnums": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": [
       "components/**/*"
