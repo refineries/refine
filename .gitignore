@@ -1,5 +1,7 @@
 # Build Output
 esm/
+esm-tsc/
+dist/
 
 # Dependency directories
 node_modules/
