@@ -1,8 +1,26 @@
 {
-  "name": "simplify-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "refine",
+  "version": "0.0.1",
+  "description": "A UI component library with the principle of refine design",
+  "license": "MIT",
+  "repository": "Refineries/refine",
+  "homepage": "https://refineries.github.io/refine-document/dist",
+  "keywords": [
+    "refine",
+    "refine-ui"
+  ],
+  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "esm/",
+    "LICENSE",
+    "README.md"
+  ],
+  "authors": [
+    "YiMing Yin",
+    "Sta Zhu"
+  ],
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
@@ -10,8 +28,6 @@
     "build:esm": "tsc --rootDir components --outDir esm",
     "build:sass": "sass components:esm"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -20,13 +36,14 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "cross-env": "^5.2.0",
     "css-loader": "^3.1.0",
-    "eslint": "^6.1.0",
+    "eslint": "^5.16.0",
     "eslint-config-alloy": "^2.0.5",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-react": "^7.14.3",
