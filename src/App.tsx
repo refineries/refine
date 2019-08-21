@@ -1,17 +1,19 @@
-import * as React from 'react'
+import React from 'react'
+import { HashRouter } from 'react-router-dom'
+import { hot } from 'react-hot-loader/root'
 import './index.scss'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import SideNav from './SideNav'
 import RouterView from './RouterView'
-function Main() {
+
+function App() {
   return (
     <div className="demo">
-      <Router>
+      <HashRouter>
         <SideNav />
         <RouterView />
-      </Router>
+      </HashRouter>
     </div>
   )
 }
 
-export default Main
+export default hot(App)

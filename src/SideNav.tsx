@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import navData from './menuData'
 function LevelOneTitle(props) {
   return <h1 className="level-one-title">{props.text}</h1>

@@ -15,6 +15,6 @@ const navData = [
         name: '按钮2',
       },
     ],
-  }
+  },
 ]
-export default navData;
+export default navData

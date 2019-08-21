@@ -1,8 +1,7 @@
-import * as React from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
-import navData from './menuData'
-
+import React from 'react'
+import { Route } from 'react-router-dom'
 import ButtonDemo from '../components/button/demo'
+
 function RouterView() {
   return (
     <div>
