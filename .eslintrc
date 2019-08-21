@@ -5,6 +5,7 @@
       "jsx": true
     }
   },
+  "plugins": ["react-hooks"],
   "extends": [
     "eslint-config-alloy/react",
     "eslint-config-alloy/typescript",

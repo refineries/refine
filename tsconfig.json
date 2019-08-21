@@ -15,9 +15,9 @@
     "noImplicitAny": false
   },
   "include": [
-      "components/**/*"
+    "components/**/*"
   ],
   "exclude": [
-      "node_modules"
+    "node_modules"
   ]
 }
