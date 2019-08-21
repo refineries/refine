@@ -1,17 +1,46 @@
 {
-  "name": "simplify-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "build:esm": "tsc --rootDir components --outDir esm",
-    "build:sass": "sass components:esm"
+  "name": "@refineries/refine",
+  "version": "0.0.2",
+  "description": "A UI component library with the principle of refine design",
+  "license": "MIT",
+  "repository": "Refineries/refine",
+  "bugs": {
+    "url": "https://github.com/refineries/refine/issues"
   },
-  "author": "",
-  "license": "ISC",
+  "private": false,
+  "keywords": [
+    "refine",
+    "refine-ui"
+  ],
+  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "esm/",
+    "LICENSE",
+    "README.md"
+  ],
+  "authors": [
+    "YiMing Yin",
+    "Sta Zhu"
+  ],
+  "scripts": {
+    "start:site": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js",
+    "build:site": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:sass": "sass components:esm",
+    "build:tsc": "tsc --rootDir components --outDir esm-tsc",
+    "build:babel": "babel esm-tsc --out-dir esm",
+    "build:esm": "npm run build:tsc && npm run build:babel && rimraf esm-tsc",
+    "build": "npm run build:esm && npm run build:sass",
+    "publish": "npm publish --registry https://registry.npmjs.org --access public"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "core-js": "^3.2.1",
+    "regenerator-runtime": "^0.13.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -20,13 +49,14 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "cross-env": "^5.2.0",
     "css-loader": "^3.1.0",
-    "eslint": "^6.1.0",
+    "eslint": "^5.16.0",
     "eslint-config-alloy": "^2.0.5",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-react": "^7.14.3",
@@ -42,10 +72,5 @@
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1"
   }
 }
