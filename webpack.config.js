@@ -1,13 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin');
-
-const __NODE_ENV__ = process.env.NODE_ENV
-const __DEV__ = process.env.NODE_ENV === 'development'
-const __PROD__ = process.env.NODE_ENV === 'production'
-
-
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('./global')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const ForkTsCheckerNotifierWebpackPlugin = require('fork-ts-checker-notifier-webpack-plugin')
 
 module.exports = {
   mode: __NODE_ENV__,
@@ -44,7 +40,7 @@ module.exports = {
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'components'),
         ],
-        loader: ['babel-loader'],
+        loader: ['babel-loader', 'ts-loader'],
       },
     ],
   },
@@ -70,7 +66,7 @@ module.exports = {
     hot: true,
     overlay: {
       warnings: false,
-      errors: true
-    }
+      errors: true,
+    },
   },
 }
