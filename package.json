@@ -32,7 +32,7 @@
     "build:babel": "babel esm-tsc --out-dir esm",
     "build:esm": "npm run build:tsc && npm run build:babel && rimraf esm-tsc",
     "build": "npm run build:esm && npm run build:sass",
-    "publish": "npm version patch && npm publish --registry https://registry.npmjs.org"
+    "publish": "npm publish --registry https://registry.npmjs.org --access public"
   },
   "dependencies": {
     "react": "^16.8.6",
