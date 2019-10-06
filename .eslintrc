@@ -19,13 +19,9 @@
     }
   },
   "rules": {
-    "no-console": 1,
+    "no-console": 0,
     "no-implict-any": 0,
     "react/jsx-indent": ["error", 2],
     "react/jsx-indent-props": ["error", 2],
-    "@typescript-eslint/no-angle-bracket-type-assertion": 0,
-    "@typescript-eslint/no-object-literal-type-assertion": 0,
-    "@typescript-eslint/no-triple-slash-reference": 0,
-    "@typescript-eslint/prefer-interface": 0
   }
 }
