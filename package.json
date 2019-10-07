@@ -32,7 +32,9 @@
     "build:babel": "babel esm-tsc --out-dir esm",
     "build:esm": "npm run build:tsc && npm run build:babel && rimraf esm-tsc",
     "build": "npm run build:esm && npm run build:sass",
-    "format": "prettier --check --write \"src/**/*.+(tsx|ts|jsx|js|css|scss|html)\"",
+    "format": "prettier --check --write \"./**/*.+(tsx|ts|jsx|js|json|css|scss|sass|html|md)\"",
+    "lint": "eslint --ext .tsx,.ts,.jsx,.js ./ && stylelint \"./**/*.+(css|scss|sass)\"",
+    "lint:fix": "eslint --fix --ext .tsx,.ts,.jsx,.js ./ && stylelint --fix \"./**/*.+(css|scss|sass)\"",
     "publish": "npm publish --registry https://registry.npmjs.org --access public"
   },
   "dependencies": {
@@ -47,6 +49,8 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@hot-loader/react-dom": "^16.9.0",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
@@ -65,15 +69,41 @@
     "fork-ts-checker-notifier-webpack-plugin": "^1.0.2",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.1",
     "prettier": "^1.18.2",
     "react-hot-loader": "^4.12.14",
     "sass": "^1.23.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint .commitlintrc.js -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx|ts|tsx)": [
+      "prettier --check --write",
+      "eslint --ext .tsx,.ts,.jsx,.js",
+      "git add"
+    ],
+    "*.(css|scss|sass)": [
+      "prettier --check --write",
+      "stylelint",
+      "git add"
+    ],
+    "*.(html|md)": [
+      "prettier --check --write",
+      "git add"
+    ]
   }
 }
