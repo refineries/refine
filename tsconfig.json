@@ -14,10 +14,6 @@
     "esModuleInterop": true,
     "noImplicitAny": false
   },
-  "include": [
-    "components/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["components/**/*"],
+  "exclude": ["node_modules"]
 }
